@@ -92,6 +92,12 @@ class HuffmanSuite extends FunSuite {
     assert(combine(leaflist) === List(Leaf('x', 4)))
   }
 
+  test("combine of Nil") {
+    val leafList = Nil
+    assert(combine(leafList) === Nil)
+
+  }
+
   test("until of code tree") {
     new TestTrees {
       val leaflist = List(t1, t2)
